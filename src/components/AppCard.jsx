@@ -1,5 +1,6 @@
 import style from './AppCard.module.css';
 import AppButton from './AppButton';
+import Tag from './Tags';
 
 const AppCard = ({image, title, content, tags}) => {
   const imagePath = `/img/${image}`;
@@ -15,9 +16,7 @@ const AppCard = ({image, title, content, tags}) => {
               <h5>{title}</h5>
               <div className={style.tags}>
                 {tags.map((tag) => (
-                  <span className={style.tag}>
-                    {tag}
-                  </span>
+                  <Tag tag={tag}/>
                 ))}
               </div>
               <p className='mb-1'>{content}</p>
