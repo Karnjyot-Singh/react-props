@@ -3,7 +3,7 @@ import AppButton from './AppButton';
 import Tag from './Tags';
 
 const AppCard = ({image, title, content, tags}) => {
-  const imagePath = `/img/${image}`;
+    const imagePath = image ? `/img/${image}` : '/img/torta_paesana.jpeg';
 
     return (
         <div className={style.card}>
